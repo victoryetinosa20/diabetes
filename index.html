@@ -1,1 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ancestral Carb Gate™ | The Before-Eba Rule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body { overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+
+        .font-handwriting { font-family: 'Caveat', cursive; }
+        .font-serif { font-family: 'Merriweather', serif; }
+
+        /* ---- COSMETIC: Drop Cap ---- */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Merriweather', serif;
+            font-size: 3.8em;
+            line-height: 0.75;
+            padding-right: 0.1em;
+            padding-top: 0.05em;
+            font-weight: 900;
+            color: #1f5da0;
+        }
+
+        #sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            padding: 12px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 9999;
+            box-shadow: 0 -4px 18px rgba(0,0,0,0.12);
+        }
+
+        #sticky-cta.show {
+            transform: translateY(0);
+        }
+
+        /* ---- COSMETIC: Yellow Highlighter ---- */
+        .highlight {
+            background: linear-gradient(180deg, transparent 55%, #ffe066 55%);
+            padding: 0 2px;
+        }
+
+        .screen-tint { background-color: #f7f9fc; }
+        .screen-tint-warm { background-color: #fefbf3; }
+
+        /* ---- COSMETIC: Indenting ---- */
+        .indented { text-indent: 2em; }
+
+        /* ---- COSMETIC: Captions ---- */
+        .img-caption {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin-top: 0.6rem;
+            line-height: 1.4;
+        }
+
+        /* ---- COSMETIC: Borders + Guarantee text box ---- */
+        .guarantee-box {
+            border: 3px solid #cc0000;
+            background: #fffdf7;
+            position: relative;
+        }
+        .guarantee-box::before {
+            content: '✓ GUARANTEED';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #cc0000;
+            color: white;
+            font-weight: 800;
+            font-size: 0.8rem;
+            padding: 3px 16px;
+            letter-spacing: 1.5px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        /* ---- COSMETIC: Subheads (breadcrumbs) ---- */
+        .subhead-breadcrumb {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.35;
+        }
+
+        /* ---- COSMETIC: Simulated Rubber Stamps ---- */
+        .rubber-stamp {
+            display: inline-block;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.78rem;
+            color: #c0392b;
+            border: 3px double #c0392b;
+            padding: 0.35rem 1rem;
+            border-radius: 4px;
+            transform: rotate(-3deg);
+            background: rgba(255,255,255,0.65);
+            mix-blend-mode: multiply;
+        }
+        .rubber-stamp.blue { color: #1a56a8; border-color: #1a56a8; }
+        .rubber-stamp.rotate-right { transform: rotate(2.5deg); }
+
+        /* ---- COSMETIC: Simulated Hand-Drawn Circle Scribbles ---- */
+        .circle-scribble {
+            display: inline-block;
+            padding: 0.15em 0.4em;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M8,32 C6,14 52,6 100,6 C152,6 194,14 192,32 C190,50 148,56 98,56 C50,56 10,50 8,32 C7,22 16,14 28,11' fill='none' stroke='%23cc0000' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+        }
+        .circle-scribble-blue {
+            display: inline-block;
+            padding: 0.15em 0.4em;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M8,32 C6,14 52,6 100,6 C152,6 194,14 192,32 C190,50 148,56 98,56 C50,56 10,50 8,32 C7,22 16,14 28,11' fill='none' stroke='%231a56a8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+        }
+
+        /* ---- COSMETIC: Simulated Hand-Drawn Underlines ---- */
+        .scribble-underline {
+            display: inline-block;
+            padding-bottom: 0.3em;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M3,7 C40,2 80,9 120,4 C150,1 180,7 197,3' fill='none' stroke='%231a56a8' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") bottom / 100% 0.32em no-repeat;
+        }
+        .scribble-underline-red {
+            display: inline-block;
+            padding-bottom: 0.3em;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M3,7 C40,2 80,9 120,4 C150,1 180,7 197,3' fill='none' stroke='%23cc0000' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") bottom / 100% 0.32em no-repeat;
+        }
+
+        /* ---- COSMETIC: Simulated Handwritten Margin Notes ---- */
+        .doodle-note {
+            font-family: 'Caveat', cursive;
+            font-size: 1.45rem;
+            line-height: 1.15;
+            color: #1a56a8;
+            text-align: right;
+            transform: rotate(-1.5deg);
+            margin: 0.4rem 0 0.4rem auto;
+            max-width: 340px;
+            clear: right;
+        }
+        .doodle-note.red { color: #cc0000; }
+        @media (min-width: 1300px) {
+            .doodle-note {
+                float: right;
+                margin-right: -195px;
+                margin-top: 0.25rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* ---- COSMETIC: Personalization — blue graphic signature ---- */
+        .signature {
+            font-family: 'Caveat', cursive;
+            color: #1a56a8;
+            font-size: 2.6rem;
+            line-height: 1;
+            transform: rotate(-3deg);
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            max-width: 620px;
+            margin: 2rem auto;
+            background: #f59e0b;
+            color: #ffffff;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 1.3;
+            padding: 1.15rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #b5540e, 0 8px 14px rgba(0,0,0,0.12);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #b5540e, 0 8px 14px rgba(0,0,0,0.15);
+        }
+
+        /* Hero entrance animation */
+        .fade-up { opacity: 0; animation: fadeUp .8s ease forwards; }
+        .delay-1 { animation-delay: .15s; }
+        .delay-2 { animation-delay: .3s; }
+        .delay-4 { animation-delay: .6s; }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- ============ HEADER ============ -->
+<!-- REPLACE "#buy" LINKS WITH YOUR CHECKOUT URL -->
+<header class="bg-[#005bb5] px-3 sm:px-4 py-3 md:py-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center gap-2 sm:gap-1">
+        <div class="text-white font-bold tracking-wider sm:tracking-widest text-[11px] sm:text-base md:text-xl leading-none flex items-center gap-1">
+            <span class="text-white whitespace-nowrap">THE ANCESTRAL CARB GATE<span class="align-super text-[9px] md:text-xs">™</span></span>
+        </div>
+        <a href="#buy" class="bg-white hover:bg-gray-100 text-blue-700 text-[10px] sm:text-xs font-bold px-3 sm:px-5 py-1.5 sm:py-2 transition-colors uppercase tracking-wide rounded whitespace-nowrap shrink-0">
+            GET STARTED
+        </a>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="max-w-4xl mx-auto px-6 pt-14 pb-12">
+
+    <p class="fade-up text-sm text-gray-500 tracking-widest text-center italic mb-4 flex items-center justify-center gap-3">
+        <span class="block w-8 h-px bg-gray-300"></span>
+        78-Year-Old Retired Hospital Pharmacist from Ibadan Says:
+        <span class="block w-8 h-px bg-gray-300"></span>
+    </p>
+
+    <div class="text-center mb-4">
+        <h1 class="fade-up delay-1 font-serif text-[#1f5da0] text-3xl md:text-4xl font-bold leading-tight mb-6">
+            “I Have Never Only Relied on Metformin. I Have Been Using This Since My Own Reading Climbed to
+            <em class="text-[#eb7d21]">7.8 in 2007.</em>”
+        </h1>
+
+        <h2 class="fade-up delay-2 font-serif text-[#eb7d21] text-2xl md:text-3xl font-bold mb-4">
+            The Before-Eba Rule
+        </h2>
+
+        <p class="fade-up delay-2 text-gray-700 font-semibold text-lg max-w-2xl mx-auto">
+            A simple 14-minute change at your table. Done before your very first bite.
+        </p>
+
+        <p class="fade-up delay-2 text-gray-500 italic text-lg max-w-2xl mx-auto mt-3">
+            It is built to help slow how fast sugar rushes into your blood not by removing your food, but by changing the order you eat it.
+        </p>
+
+        <p class="fade-up delay-2 text-gray-500 italic text-lg max-w-2xl mx-auto mt-3">
+            Even if you have tried for years and quietly believe your body is too stubborn to change.
+        </p>
+    </div>
+
+    <!-- HERO IMAGE — full size, no crop -->
+    <div class="fade-up delay-4 mb-2">
+        <div class="relative w-full border border-gray-200 shadow-sm">
+            <img
+                src="https://i.ibb.co/v6qKwTfm/hero-image.jpg"
+                alt="The Before-Eba Rule"
+                class="w-full h-auto block"
+            >
+        </div>
+    </div>
+
+</section>
+
+<!-- ============ THE METER ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p class="text-center text-xs uppercase tracking-[0.25em] text-gray-500">Take a look at this image</p>
+
+        <div class="relative w-full border border-gray-200 shadow-sm">
+            <img
+                src="https://i.ibb.co/hJRWbMwK/sugar-reading.jpg"
+                alt="Sugar reading"
+                class="w-full h-auto block"
+            >
+        </div>
+
+        <p class="font-serif text-2xl md:text-3xl font-bold text-[#1f5da0] text-center pt-2">That meter belongs to Baba Akinwade.</p>
+
+        <p class="text-center font-bold text-lg leading-relaxed">
+            He is 78.<br>
+            A Retired Hospital Pharmacist from Ibadan
+        </p>
+
+        <p>And he ate amala on Saturday. He ate eba at his daughter's place.</p>
+
+        <p>He took rice at the naming ceremony two weeks ago, and he did not carry his own cooler like a prisoner.</p>
+
+        <p>He has never taken metformin.</p>
+
+        <p class="font-bold">Not one tablet in his life.</p>
+
+        <p>But here is the part that held my chest.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-6 px-8 text-center my-6 rounded">
+            <p class="text-4xl md:text-6xl font-extrabold text-[#1f5da0] font-serif">5.6 mmol/L.</p>
+        </div>
+
+        <p>And in 30 years of yearly checks at that same clinic in Ibadan,</p>
+
+        <p>that number has never crossed</p>
+
+        <p class="text-3xl md:text-4xl font-serif font-bold text-[#1f5da0]">6.3.</p>
+
+        <p>So the question is not, "Why are you not disciplined?"</p>
+
+        <p class="font-bold">You are disciplined. You have been disciplined for years.</p>
+
+        <p>The question is something nobody ever checked on you.</p>
+
+        <p>Not the doctor with seven patients waiting outside.</p>
+
+        <p>Not the nurse writing your file.</p>
+
+        <p>Not the WhatsApp man selling "sugar flush" from a screenshot.</p>
+
+        <p class="font-bold"><span class="highlight">Something that happens before the first bite enters your mouth.</span></p>
+
+        <p>In a moment I will tell you what the old man said to me.</p>
+
+        <p>But first — I want you to remember what your own meter said this morning.</p>
+
+    </div>
+</div>
+
+<!-- ============ THE MORNING ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p class="drop-cap">You woke up before your alarm even finished its first ring.</p>
+
+        <p>The room was still dim. NEPA had not brought light. The fan was turning slowly like it was tired too.</p>
+
+        <p>For three small seconds, your mind was clear.</p>
+
+        <p>Then reality entered.</p>
+
+        <p>Your hand did not reach for your phone first.</p>
+
+        <p>It did not reach for water.</p>
+
+        <p>It did not touch your wife’s shoulder or your husband’s back.</p>
+
+        <p>It went straight to the meter.</p>
+
+        <p>You opened the strip bottle with that small dry sound.</p>
+
+        <p>You pressed the lancet into the side of your finger.</p>
+
+        <p>You squeezed until the blood rose like a red bead.</p>
+
+        <p>Then you waited.</p>
+
+        <p>Three seconds.</p>
+
+        <p>Your chest was tight.</p>
+
+        <p>You were not begging God for a miracle. You were only begging for something small.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.3rem] md:text-[1.5rem] font-bold text-[#1f5da0] font-serif italic">
+                “Please… just let it be lower than yesterday.”
+            </p>
+        </div>
+
+        <p>The meter beeped.</p>
+
+        <p>And your stomach dropped.</p>
+
+        <p>You did not eat late last night.</p>
+
+        <p>You did not take malt.</p>
+
+        <p>You even refused the meat pie they shared at the shop.</p>
+
+        <p>Yet there it was.</p>
+
+        <p>You wiped the blood. You threw the strip into the dustbin like it offended you. You told yourself, “Today I will be more serious.”</p>
+
+        <p>But as you stepped out of that bathroom, you already knew the truth.</p>
+
+        <p class="font-bold">That small morning defeat was going to follow you everywhere.</p>
+
+        <div class="subhead-breadcrumb">It follows you to breakfast.</div>
+
+        <p>Everybody at the table is eating like normal human beings.</p>
+
+        <p>Bread is soft. Egg is frying. Pap is steaming. Somebody is laughing because the akara is hot.</p>
+
+        <p>You are there with your own “special plate.”</p>
+
+        <p>No joy. No freedom. Just fear wearing the mask of food.</p>
+
+        <p>You take one spoon and calculate your whole life.</p>
+
+        <p>You chew and wonder if your tongue is dry because of sugar or because of worry.</p>
+
+        <p>You look at the eba and feel like it is looking back at you.</p>
+
+        <p>It is not breakfast anymore.</p>
+
+        <p class="font-bold text-lg">It is an exam you did not read for.</p>
+
+        <div class="subhead-breadcrumb">By afternoon, it follows you outside.</div>
+
+        <p>Somebody at work opens rice. The smell alone can move your head.</p>
+
+        <p>They say, “Oga, come and eat.”</p>
+
+        <p>You smile and say, “I don dey watch am.”</p>
+
+        <p>Small sentence. Big shame.</p>
+
+        <p>Because you are not watching football.</p>
+
+        <p>You are watching your own life from outside.</p>
+
+        <p>You see their eyes move to your plate.</p>
+
+        <p>You hear the joke that is not really a joke.</p>
+
+        <p>“Ah ah, since when you start modeling?”</p>
+
+        <p>Everybody laughs. You laugh too.</p>
+
+        <p>But inside, something folds.</p>
+
+        <div class="subhead-breadcrumb">Then you begin to withdraw.</div>
+
+        <p>You stop going to owambe because you are tired of explaining why you are holding only water.</p>
+
+        <p>You stop visiting some people because their wives will bring food and look at you with pity when you say no.</p>
+
+        <p>You say, “I’m busy.”</p>
+
+        <p>You say, “I’m not feeling too fine.”</p>
+
+        <p>You say, “Another time.”</p>
+
+        <p>But the truth is simple.</p>
+
+        <p class="font-bold"><span class="highlight">You are tired of being the sick one at a full table.</span></p>
+
+        <div class="subhead-breadcrumb">At home, it is quieter.</div>
+
+        <p>That is where it hurts most.</p>
+
+        <p>Your partner does not shout. That would almost be better.</p>
+
+        <p>They just look at you differently.</p>
+
+        <p>They hide the soft drinks.</p>
+
+        <p>They ask, “Have you taken your drugs?” in a voice that sounds like care mixed with fear.</p>
+
+        <p>They wake up when you stand up to urinate for the third time.</p>
+
+        <p>You pretend not to notice.</p>
+
+        <p>But you notice everything.</p>
+
+        <p>And one night, in the dark, the real question comes and sits on your chest.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.15rem] md:text-[1.35rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                “If I am managing like this at this age… what will happen when I am older?”
+            </p>
+        </div>
+
+        <p>You do not answer.</p>
+
+        <p>You just turn to the wall.</p>
+
+    </div>
+</section>
+
+<!-- ============ STILL, LISTEN TO ME ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p class="font-bold text-lg">Still, listen to me.</p>
+
+        <p>There is a reason I am taking you through this road.</p>
+
+        <p>It is not to punish you.</p>
+
+        <p>It is not to open your wound and leave you there.</p>
+
+        <p>I found something.</p>
+
+        <p>Not magic.</p>
+
+        <p>Not “one leaf cures all.”</p>
+
+        <p>Not the kind of nonsense that has made many of us ashamed of even hoping again.</p>
+
+        <p>I found a way ordinary Nigerians are putting a gate before the carb — same food, same table, same family — so the sugar does not rush the body like danfo brake failure.</p>
+
+        <p>It is coming.</p>
+
+        <p>But before I show you, you need to see how deep I went.</p>
+
+        <p>Because if I only show you the answer, you may not believe it.</p>
+
+        <p class="font-bold"><span class="scribble-underline">So let us go there.</span></p>
+
+    </div>
+</div>
+
+<!-- ============ REMOVE THIS LOAD ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="flex items-center justify-center gap-4 mb-8 mt-4">
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+            <h2 class="font-serif font-black text-[1.35rem] md:text-2xl text-center text-[#1f5da0] leading-snug tracking-wide">FIRST, REMOVE THIS LOAD FROM YOUR NECK</h2>
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+        </div>
+
+        <p>You are not lazy.</p>
+
+        <p>You are not dirty.</p>
+
+        <p>You are not cursed.</p>
+
+        <p>You are not “the one that did not use his youth well.”</p>
+
+        <p>You are a Nigerian adult who was handed a serious condition with almost no practical map for Nigerian life.</p>
+
+        <p>They told you, “Stop sugar.”</p>
+
+        <p>As if sugar is only cube inside tea.</p>
+
+        <p>They did not tell you what to do when eba, rice, yam, beans, bread, pap, amala and swallow are not “snacks” to you.</p>
+
+        <p>They are your life.</p>
+
+        <p>They are your mother’s kitchen.</p>
+
+        <p>They are your childhood.</p>
+
+        <p>They are the smell of Saturday.</p>
+
+        <p>You are not broken.</p>
+
+        <p class="font-bold"><span class="highlight">You have just not been given the right system yet.</span></p>
+
+        <p>Say that again in your mind.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.2rem] md:text-[1.4rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                I have not been given the right system yet.
+            </p>
+        </div>
+
+        <p class="font-bold">Good.</p>
+
+        <p>Now drop everything you are doing and listen to every word I am about to say.</p>
+
+        <p>Because what I am about to tell you was not invented in a gym abroad.</p>
+
+        <p>It was not copied from people that eat quinoa and call it dinner.</p>
+
+        <p>It was sitting quietly inside our own older way of eating.</p>
+
+        <p>It was not lost.</p>
+
+        <p>It was just not shared in the right format.</p>
+
+        <p class="font-bold">Until now.</p>
+
+    </div>
+</section>
+
+<!-- ============ WHO AM I ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="flex items-center space-x-4 my-6">
+            <img src="https://i.ibb.co/yFwMsN81/Screenshot-20260919-073737.png" alt="Engr. Chuka" class="w-20 h-20 rounded-full border-2 border-gray-300 object-cover shrink-0">
+            <p class="font-handwriting text-4xl md:text-5xl text-black">My name Engr. Chuka.</p>
+        </div>
+
+        <p>I am not a doctor.</p>
+
+        <p>I am not a nutritionist.</p>
+
+        <p>I am not one fine wellness coach with white teeth and rented ring light.</p>
+
+        <p>I am a 47-year-old civil engineer.</p>
+
+        <p>I have stood inside molue before.</p>
+
+        <p>I have priced tomato in Mile 12 and argued like my life depended on it.</p>
+
+        <p>I know what it means to smile outside and calculate hospital bills inside.</p>
+
+        <p>And three years ago, in Ibadan, my own body turned against me.</p>
+
+        <p>The place was a small clinic not far from Dugbe.</p>
+
+        <p>The kind of clinic where the ceiling fan makes more noise than wind. The plastic chair has one broken leg. The nurse calls your name like she has known you since primary school.</p>
+
+        <p class="italic font-bold">“Mr. Ademola?”</p>
+
+        <p>I stood up.</p>
+
+        <p>Inside, the doctor looked at my paper for too long.</p>
+
+        <p>Then he said the words.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.1rem] md:text-[1.3rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                “Your fasting sugar is high. Very high.”
+            </p>
+        </div>
+
+        <p>I laughed. Small laugh. Stupid laugh.</p>
+
+        <p>“High like how?”</p>
+
+        <p>He turned the file toward me.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-6 px-8 text-center my-6 rounded">
+            <p class="text-4xl md:text-6xl font-extrabold text-[#1f5da0] font-serif">11.4 mmol/L.</p>
+        </div>
+
+        <p>I did not even know the meaning fully. But my body understood before my brain did.</p>
+
+        <p>My palms became wet.</p>
+
+        <p>My mouth went dry.</p>
+
+        <p>The room became smaller.</p>
+
+        <p>He said the normal things.</p>
+
+        <p>“Watch your diet.”</p>
+
+        <p>“Exercise.”</p>
+
+        <p>“Reduce carbohydrate.”</p>
+
+        <p>“Take your medication.”</p>
+
+        <p>“Come back for review.”</p>
+
+        <p>I nodded like a good student.</p>
+
+        <p>But inside my head, one voice was shouting:</p>
+
+        <p class="font-bold text-xl text-[#1f5da0]">“God, abeg. Not me.”</p>
+
+    </div>
+</div>
+
+<!-- ============ THE MIDNIGHT SEARCHES ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p>I sat in my car for twenty minutes before I started the engine.</p>
+
+        <p>I remember the steering wheel was hot.</p>
+
+        <p>I remember one danfo conductor outside was shouting “Ojoo! Ojoo!” like the world had not changed.</p>
+
+        <p>I just sat there.</p>
+
+        <p>Then I did what many men do when shame enters the body.</p>
+
+        <p class="font-bold">I hid it.</p>
+
+        <p>At midnight, I would carry my phone into the bathroom and Google with the brightness low so my wife would not see the screen.</p>
+
+        <div class="space-y-3 my-6 max-w-xl">
+            <div class="bg-white border border-gray-300 rounded-full px-5 py-3 flex items-center gap-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-700 italic text-sm md:text-base">"Can diabetes wound kill?"</span>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-full px-5 py-3 flex items-center gap-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-700 italic text-sm md:text-base">"Can high sugar affect manhood?"</span>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-full px-5 py-3 flex items-center gap-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-700 italic text-sm md:text-base">"Kidney failure Nigeria cost."</span>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-full px-5 py-3 flex items-center gap-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-700 italic text-sm md:text-base">"Diabetic foot early sign."</span>
+            </div>
+        </div>
+
+        <p>Every answer was worse than the last.</p>
+
+        <p class="font-bold text-lg leading-relaxed">Neuropathy.<br>Kidney disease.<br>Blindness.<br>Amputation.</p>
+
+        <p>One night I read about a man that started with one small sore on his toe.</p>
+
+        <p>One small sore.</p>
+
+        <p>By the time the story ended, they had removed the leg below the knee.</p>
+
+        <p>I dropped the phone and stared at my own feet in the dark.</p>
+
+        <p>They looked normal.</p>
+
+        <p class="font-bold">But I no longer trusted them.</p>
+
+    </div>
+</section>
+
+<!-- ============ FOLAKE ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="subhead-breadcrumb">My wife, Folake, tried.</div>
+
+        <p>God bless that woman.</p>
+
+        <p>She reduced oil. She boiled more than she fried. She started asking market women questions like she was writing project.</p>
+
+        <p>“Mama, which swallow better for sugar?”</p>
+
+        <p>“Unripe plantain good?”</p>
+
+        <p>“Beans okay?”</p>
+
+        <p>Every woman gave different answer.</p>
+
+        <p>One said never touch beans.</p>
+
+        <p>One said beans is the only hope.</p>
+
+        <p>One said bitter leaf water morning and night.</p>
+
+        <p>One said, “My brother, just avoid white rice and pray.”</p>
+
+        <p class="font-bold">Confusion entered our house and paid rent.</p>
+
+        <p>Still, Folake did not leave me.</p>
+
+        <p>She would touch my back at night and say, “We will manage it.”</p>
+
+        <p class="font-serif text-3xl font-bold text-[#1f5da0]">Manage.</p>
+
+        <p>That word used to sound like hope.</p>
+
+        <p class="font-bold">After some time, it began to sound like life imprisonment.</p>
+
+        <div class="subhead-breadcrumb">I started disappearing from my own life.</div>
+
+        <p>My company end-of-year dinner came. I did not go.</p>
+
+        <p>My old school friend did remembrance for his mother in Osogbo. I sent money and said work held me.</p>
+
+        <p>My neighbour’s daughter wedded in Ibadan. I entered, greeted people, and left before food started going round.</p>
+
+        <p>Because how do you sit at a full Nigerian table and become the topic?</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded space-y-1">
+            <p class="text-[1.1rem] md:text-[1.25rem] font-bold text-[#1f5da0] font-serif italic">“Why are you not eating?”</p>
+            <p class="text-[1.1rem] md:text-[1.25rem] font-bold text-[#1f5da0] font-serif italic">“Is it that serious?”</p>
+            <p class="text-[1.1rem] md:text-[1.25rem] font-bold text-[#1f5da0] font-serif italic">“Ah, sorry o.”</p>
+            <p class="text-[1.1rem] md:text-[1.25rem] font-bold text-[#1f5da0] font-serif italic">“So you can’t take small malt?”</p>
+        </div>
+
+        <p class="font-bold">Small malt.</p>
+
+        <p>Everybody thinks the danger is small.</p>
+
+        <p>Only you know the war inside your body.</p>
+
+    </div>
+</div>
+
+<!-- ============ THE CORRIDOR ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="flex items-center justify-center gap-4 mb-8 mt-4">
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+            <h2 class="font-serif font-black text-[1.35rem] md:text-2xl text-center text-[#1f5da0] leading-snug tracking-wide">THE LOWEST POINT DID NOT COME FROM THE METER</h2>
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+        </div>
+
+        <p>It came from a corridor.</p>
+
+        <p>One evening, I came back from work tired. Not normal tired. The kind of tired that sits inside your bones.</p>
+
+        <p>Folake was in the kitchen talking on the phone.</p>
+
+        <p>She did not know I had entered.</p>
+
+        <p>I heard her say, “I don’t know what to do for him. He is not himself anymore.”</p>
+
+        <p>Then silence.</p>
+
+        <p>Then she said, “I’m scared.”</p>
+
+        <p>I stood in the corridor outside the kitchen for a long time.</p>
+
+        <p>I did not go in.</p>
+
+        <p class="font-bold">A full man. Standing outside his own kitchen like a stranger.</p>
+
+        <p>That was the night I knew this thing was not only about sugar.</p>
+
+        <p class="font-bold"><span class="highlight">It was eating my marriage softly.</span></p>
+
+    </div>
+</section>
+
+<!-- ============ EVERYTHING I TRIED ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p>I want to tell you exactly what I tried, because maybe you have tried some too.</p>
+
+        <p>And I do not want you to feel like you wasted money or time.</p>
+
+        <p>I want you to see the road I passed, so when I tell you what finally helped, you will know why it was different.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Metformin</strong> — months. My stomach was doing war. Some days weak, some days normal, readings still moving anyhow. I did not stop it. But I knew drug alone was not giving me peace.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Skipping meals</strong> — one week. I became dizzy and angry. Then when hunger broke me, my sugar jumped like it was laughing at me.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Cutting swallow completely</strong> — nine days. I lost weight and lost joy. By day ten, I ate eba like a man coming out of prison.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Bitter leaf water</strong> — random mornings. No dose. No timing. No tracking. Some days I felt lighter. Some days nothing. I never knew what was working.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Moringa and ginger</strong> — on and off. Same problem. Everybody had an opinion. Nobody had a system.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>One WhatsApp “sugar control pack”</strong> — ₦38,000. Big grammar. Small bottle. No result I could measure.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Pap only for dinner</strong> — almost two weeks. I was hungry, waking at night, and miserable.</p>
+
+        <p class="pl-4 border-l-4 border-gray-200"><strong>Prayer and fasting</strong> — I still believe God heals. But the number on the meter did not respect my fasting if my table was still lawless.</p>
+
+        <p>By the end of that year, I had tried everything I could find.</p>
+
+        <p>Everything my doctor suggested.</p>
+
+        <p>Everything the internet suggested.</p>
+
+        <p>Everything family suggested.</p>
+
+        <p>Everything fear suggested.</p>
+
+        <p class="font-bold">And still, my mornings were heavy.</p>
+
+        <p>I remember sitting in my car one evening after another bad reading, engine off, asking the same question I had been avoiding:</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.3rem] md:text-[1.5rem] font-bold text-[#1f5da0] font-serif italic">
+                “Why is <span class="circle-scribble">nothing</span> working?”
+            </p>
+        </div>
+
+        <p>I did not have an answer.</p>
+
+        <p>Not yet.</p>
+
+        <p class="font-bold">But I was about to meet someone who did.</p>
+
+    </div>
+</div>
+
+<!-- ============ THE CHIEFTAINCY INSTALLATION ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="flex items-center justify-center gap-4 mb-8 mt-4">
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+            <h2 class="font-serif font-black text-[1.2rem] md:text-[1.5rem] text-center text-[#1f5da0] leading-snug tracking-wide">IT HAPPENED AT A CHIEFTAINCY INSTALLATION IN OYO TOWN</h2>
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+        </div>
+
+        <p>Heat everywhere. Drummers sweating. Small boys running with pure water. Women in lace that could pay school fees.</p>
+
+        <p>The food was proper.</p>
+
+        <p>Pounded yam like white mountain. Amala black and shining. Gbegiri. Ewedu. Stew with enough meat to silence argument.</p>
+
+        <p>I was sitting at the edge, pushing food around my plate like a child avoiding punishment.</p>
+
+        <p>Then one old man in white agbada looked at me and smiled.</p>
+
+        <p>Not pity smile.</p>
+
+        <p>Not mocking smile.</p>
+
+        <p>Just knowing.</p>
+
+        <p>He said, “You are fighting your plate.”</p>
+
+        <p>I laughed because what else can a man do?</p>
+
+        <p>He called one young boy.</p>
+
+        <p>“Tell Baba Akinwale that the man near the canopy is here.”</p>
+
+        <p>I did not know any Baba Akinwale.</p>
+
+        <p>But in Yoruba culture, when an elder summons you, you go.</p>
+
+    </div>
+</section>
+
+<!-- ============ BABA AKINWALE ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p class="font-serif text-2xl md:text-3xl font-bold text-[#1f5da0]">Baba Akinwale was 68 years old.</p>
+
+        <p>Retired hospital pharmacist from Ibadan.</p>
+
+        <p>Not herbalist with cowries.</p>
+
+        <p>Not pastor with olive oil.</p>
+
+        <p>Not online guru.</p>
+
+        <p>A man that had spent years around drugs, dosages, labels, patients, and the quiet mistakes people make after the doctor has spoken.</p>
+
+        <p>His own fasting glucose had been measured at a clinic in Ibadan every year for decades.</p>
+
+        <p>He showed me an old logbook.</p>
+
+        <p>Same handwriting.</p>
+
+        <p>Same clinic stamp.</p>
+
+        <p>Year after year.</p>
+
+        <p>His reading once climbed to 7.8 in 2007.</p>
+
+        <p>After that, it steadied.</p>
+
+        <p>He never told me to throw away medicine. In fact, he looked angry when I asked if leaf could replace drug.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.1rem] md:text-[1.3rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                “If anybody tells you to stop your doctor’s drug because of leaf, run.”
+            </p>
+        </div>
+
+        <p>Then he leaned closer.</p>
+
+        <p>And he said the sentence that broke my shame.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.15rem] md:text-[1.35rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                “You are fighting your body with advice made by people who do not know your food.”
+            </p>
+        </div>
+
+        <p>I sat there like somebody opened my chest and removed smoke.</p>
+
+        <p>Because that was it.</p>
+
+        <p>Not that I was evil.</p>
+
+        <p>Not that I was weak.</p>
+
+        <p>Not that I did not love life.</p>
+
+        <p class="font-bold"><span class="highlight">The tools were wrong for the table in front of me.</span></p>
+
+    </div>
+</div>
+
+<!-- ============ THE GATE ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <p>He explained it simply.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-white py-5 px-8 my-6 rounded">
+            <p class="text-[1.05rem] md:text-[1.2rem] font-serif italic text-gray-800 leading-relaxed">
+                “The problem is not only what enters your mouth,” he said. “It is the order. The timing. The preparation. The gate before the carb.”
+            </p>
+        </div>
+
+        <p class="text-center font-serif font-black text-5xl md:text-7xl text-[#1f5da0] py-2">Gate.</p>
+
+        <p>That word stayed with me.</p>
+
+        <p>He said our older people did not eat anyhow.</p>
+
+        <p>There was sequence.</p>
+
+        <p>There was pacing.</p>
+
+        <p>There was bitter before sweet.</p>
+
+        <p>There was soup and protein before heavy swallow many times.</p>
+
+        <p>There was walking after food, not sleeping immediately.</p>
+
+        <p>There was respect for the body’s traffic.</p>
+
+        <p>Modern life scattered it.</p>
+
+        <p>We now eat fast, eat late, sit down after, sleep quick, and wake up to fear.</p>
+
+        <p>Then we blame willpower.</p>
+
+        <p>He looked at my plate and said, “You don’t need to hate eba. You need to put a gate before it.”</p>
+
+        <p>I wanted to argue.</p>
+
+        <p>A gate?</p>
+
+        <p>For sugar?</p>
+
+        <p>It sounded too simple.</p>
+
+        <p>But simple is not the same as small.</p>
+
+        <p class="font-bold">A padlock is simple too. It still stops a thief.</p>
+
+        <div class="flex items-center justify-center gap-4 mb-8 mt-14">
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+            <h2 class="font-serif font-black text-[1.35rem] md:text-2xl text-center text-[#1f5da0] leading-snug tracking-wide">HE GAVE ME THE SHAPE OF IT</h2>
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+        </div>
+
+        <p>Not a full lecture. Not a product pitch.</p>
+
+        <p class="font-bold">Just four parts.</p>
+
+        <div class="grid grid-cols-1 gap-4 my-6">
+            <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                <p class="font-bold text-[#1f5da0]">Step 1:</p>
+                <p>A morning preparation that tells the body the day has started.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                <p class="font-bold text-[#1f5da0]">Step 2:</p>
+                <p>A meal sequencing rule before swallow or rice enters.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                <p class="font-bold text-[#1f5da0]">Step 3:</p>
+                <p>A short traditional fasting window that does not punish you.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                <p class="font-bold text-[#1f5da0]">Step 4:</p>
+                <p>An evening preparation so night does not undo afternoon.</p>
+            </div>
+        </div>
+
+        <p class="font-bold">Four steps.</p>
+
+        <p>I remember thinking, “Only four?”</p>
+
+        <p>Because suffering had made complicated things look serious. And simple things look fake.</p>
+
+        <p>Part of me felt foolish.</p>
+
+        <p>An old man near a chieftaincy canopy is telling me food order can help my reading?</p>
+
+        <p>Come on.</p>
+
+        <p>But another part of me — the tired part — said, “You have tried hard things. Maybe try the simple thing with your full chest.”</p>
+
+        <p class="font-bold">So I did.</p>
+
+        <p>I did not stop my medication.</p>
+
+        <p>I did not go and buy one miracle root.</p>
+
+        <p>I did not announce it to anybody.</p>
+
+        <p class="font-bold"><span class="scribble-underline">I just followed the gate.</span></p>
+
+    </div>
+</section>
+
+<!-- ============ DAY 1 TO DAY 5 ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="subhead-breadcrumb">Day 1, nothing dramatic happened.</div>
+
+        <p>That almost comforted me.</p>
+
+        <p>Because after years of fake promises, drama had become suspicious.</p>
+
+        <p>Day 2, I noticed I was not as thirsty in the afternoon.</p>
+
+        <p class="font-bold">Small thing. Very small.</p>
+
+        <p>Normally by 2 p.m., my mouth would be dry like I swallowed cotton. That day, the dryness reduced.</p>
+
+        <p>I did not call it victory.</p>
+
+        <p>I called it coincidence.</p>
+
+        <p>Day 3, I slept through the night without waking up to urinate.</p>
+
+        <p>When I woke and saw morning light, I was confused.</p>
+
+        <p>I checked the bed like urine was hiding somewhere.</p>
+
+        <p>Nothing.</p>
+
+        <p>I lay back and stared at the ceiling.</p>
+
+        <p>It had been months since my bladder allowed me dream in peace.</p>
+
+        <p>Still, I kept quiet.</p>
+
+        <p>Because hope can embarrass you if you shout too early.</p>
+
+        <p class="font-bold text-lg">Day 5 came.</p>
+
+        <p>Morning. Bathroom. Meter.</p>
+
+        <p>I pricked my finger.</p>
+
+        <p>I pressed the blood to the strip.</p>
+
+        <p>I waited.</p>
+
+        <p>Three seconds.</p>
+
+        <p>The meter beeped.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-6 px-8 text-center my-6 rounded">
+            <p class="text-4xl md:text-6xl font-extrabold text-[#1f5da0] font-serif">7.1 mmol/L.</p>
+        </div>
+
+        <p>I stared at the screen.</p>
+
+        <p>I checked the strip.</p>
+
+        <p>I checked the meter code.</p>
+
+        <p>I pricked another finger and tested again.</p>
+
+        <p>Same range.</p>
+
+        <p>My hand started shaking.</p>
+
+        <p>Not because 7.1 is perfect. It is not.</p>
+
+        <p>But because for the first time in years, the number had moved in a direction that felt like mercy.</p>
+
+        <p>I sat on the edge of the bathtub and covered my mouth.</p>
+
+        <p>I did not want Folake to hear me crying.</p>
+
+        <p>Men do this thing where we cry silently like it is not crying.</p>
+
+        <p class="font-bold">It is crying.</p>
+
+        <hr class="border-gray-200 my-10">
+
+        <div class="subhead-breadcrumb">The sweetest proof did not come from the meter.</div>
+
+        <p>It came from Folake.</p>
+
+        <p>I did not tell her anything yet.</p>
+
+        <p>I wanted to be sure.</p>
+
+        <p>Around Day 18, we were eating dinner. Same table. Same plates. Nothing special.</p>
+
+        <p>She looked at me and said, “You are eating like yourself again.”</p>
+
+        <p>I said, “How?”</p>
+
+        <p>She said, “You are not fighting your plate.”</p>
+
+        <p>Then her eyes became red.</p>
+
+        <p>She tried to hide it by standing up to carry pot.</p>
+
+        <p>I held her hand.</p>
+
+        <p>She broke.</p>
+
+        <p>Not loud cry. The quiet type that comes from carrying fear too long.</p>
+
+        <div class="border-2 border-[#1f5da0] bg-[#f0f6ff] py-5 px-8 text-center my-6 rounded">
+            <p class="text-[1.2rem] md:text-[1.4rem] font-bold text-[#1f5da0] font-serif italic leading-relaxed">
+                “I thought I was losing you small small.”
+            </p>
+        </div>
+
+        <p>I had no answer.</p>
+
+        <p>Because I thought so too.</p>
+
+    </div>
+</div>
+
+<!-- ============ PEOPLE STARTED ASKING ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="subhead-breadcrumb">After that, people started asking.</div>
+
+        <p>First one cousin.</p>
+
+        <p>Then one brother-in-law that normally only calls when he needs something.</p>
+
+        <p>Then one woman from church whose husband was “borderline” and hiding it like debt.</p>
+
+        <div class="space-y-2 my-6 max-w-md">
+            <div class="bg-white border border-gray-200 rounded-lg rounded-tl-none px-4 py-2.5 shadow-sm text-gray-700 text-[0.95rem]">
+                “Demola, what are you doing?”
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg rounded-tl-none px-4 py-2.5 shadow-sm text-gray-700 text-[0.95rem]">
+                “Which hospital?”
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg rounded-tl-none px-4 py-2.5 shadow-sm text-gray-700 text-[0.95rem]">
+                “Which herb?”
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg rounded-tl-none px-4 py-2.5 shadow-sm text-gray-700 text-[0.95rem]">
+                “Is it abroad drug?”
+            </div>
+        </div>
+
+        <p>I tried to explain one by one.</p>
+
+        <p>But I saw the problem.</p>
+
+        <p>People did not need another scattered advice.</p>
+
+        <p>They needed the same thing I needed: order.</p>
+
+        <p class="font-bold">A plan.</p>
+
+        <p class="font-bold">A sequence.</p>
+
+        <p class="font-bold">A Nigerian table guide.</p>
+
+        <p>Safety notes.</p>
+
+        <p>Tracking.</p>
+
+        <p>Market list.</p>
+
+        <p>Owambe survival.</p>
+
+        <p>The exact thing to do before eba, before rice, before pap, before bread.</p>
+
+        <p>So I packaged everything into a simple playbook.</p>
+
+        <p>Not because I wanted to become seller.</p>
+
+        <p>Because I could not keep answering voice notes at midnight.</p>
+
+    </div>
+</section>
+
+<!-- ============ THE PRODUCT ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center bg-white py-14 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div id="product" class="text-[#F37F1B] font-bold items-center justify-center text-center text-2xl md:text-3xl mb-1 py-4">
+            It is called:
+        </div>
+
+        <h1 class="text-[#1f5da0] font-extrabold text-3xl md:text-4xl mb-2 tracking-tight text-center">
+            The Ancestral Carb Gate™
+        </h1>
+
+        <p class="text-center text-gray-700 font-bold text-[1.05rem] md:text-[1.2rem] max-w-2xl mx-auto leading-snug">
+            A 14-Day Nigerian Herbal Eating Plan to Help Slow Sugar Spikes and Steady Your Readings — Without Throwing Away Your Food or Stopping Your Medication
+        </p>
+
+        <div class="flex justify-center my-8 relative">
+            <div class="relative">
+                <img src="https://i.ibb.co/gMVLxLVk/image.jpg" alt="The Ancestral Carb Gate" class="max-w-full rounded shadow-lg border border-gray-200">
+            </div>
+        </div>
+
+        <p class="indented">It is the same <strong>4-part gate sequence</strong> that took me from fear every morning to a table I could face again.</p>
+
+        <p class="indented">Broken down so a total beginner can <span class="highlight">start tonight</span>.</p>
+
+        <p class="indented">No complicated diet grammar.</p>
+
+        <p class="indented">No killing yourself with hunger.</p>
+
+        <p class="indented">No wasting money on one “secret root” sold with pressure.</p>
+
+        <p class="indented">No command to stop your doctor’s drug.</p>
+
+        <p class="indented">Just a clear Nigerian system that helps you put a gate before the carb.</p>
+
+        <p class="indented">So your body is not ambushed.</p>
+
+        <p class="indented font-bold text-black text-lg">Remember: you are not lazy.</p>
+
+        <p class="indented font-bold text-black text-lg">You are not cursed.</p>
+
+        <p class="indented font-bold text-black text-lg">You are not finished.</p>
+
+        <p class="indented font-bold text-black text-lg">Your routine was just exposed.</p>
+
+        <p class="indented font-bold text-black text-lg">And this plan is built for the “exposed” part.</p>
+
+        <div class="subhead-breadcrumb text-center text-2xl md:text-[1.6rem]">Picture this.</div>
+
+        <p class="indented">It is <strong>6:40 a.m.</strong></p>
+
+        <p class="indented">Same bathroom. Same meter. Same strip.</p>
+
+        <p class="indented">But today, your hand is not shaking the same way.</p>
+
+        <p class="indented">You prick.</p>
+
+        <p class="indented">You press.</p>
+
+        <p class="indented">You wait.</p>
+
+        <p class="indented">The meter beeps.</p>
+
+        <p class="indented">The number is not where you want it forever yet.</p>
+
+        <p class="indented">But it is moving like your body is finally listening.</p>
+
+        <p class="indented">You check again.</p>
+
+        <p class="indented">Same direction.</p>
+
+        <p class="indented">You call Folake. Your voice cracks small. She comes and looks at the screen.</p>
+
+        <p class="indented">For the first time in a long time, you both smile before work.</p>
+
+        <p class="indented">Not because life became perfect.</p>
+
+        <p class="indented">Because you finally have proof that your effort is not pouring into basket.</p>
+
+        <p class="indented">Proof on the meter.</p>
+
+        <p class="indented">Proof in your sleep.</p>
+
+        <p class="indented">Proof in your mouth not drying like harmattan by noon.</p>
+
+        <p class="indented">Proof at the table when food is food again, not enemy.</p>
+
+        <p class="indented font-bold text-black text-lg">That is not a dream.</p>
+
+        <p class="indented font-bold text-black text-lg"><span class="scribble-underline">That is what can begin to happen when your body stops being ambushed by every meal.</span></p>
+
+    </div>
+</section>
+
+<!-- ============ WHAT'S INSIDE ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center bg-white pb-14 px-5">
+    <div class="max-w-[850px] w-full">
+
+        <div class="border-[2px] border-[#313840] mb-12 bg-white shadow-lg">
+            <div class="bg-[#1f5da0] text-white text-center py-5 px-6 text-[1.2rem] md:text-[1.5rem] font-bold leading-tight">
+                Inside The Ancestral Carb Gate™, you’ll discover:
+            </div>
+
+            <div class="p-6 md:p-10 text-[1.05rem] leading-[1.65]">
+                <ul class="space-y-7">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>The <strong>Before-Eba Rule</strong> that takes about 14 minutes and helps slow how fast your swallow can hit your blood — without banning eba.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>The simple <strong>“first three things on the fork”</strong> order that can make rice, beans, yam and swallow enter with more control.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>How to use common local supports like <strong>bitter leaf, moringa, ginger, garlic and cinnamon</strong> with timing and tracking, not random hope.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>The exact market list for <strong>Ibadan, Lagos, Abuja, PH, Enugu, Kano or Benin</strong> — normal things, not imported grass.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>A <strong>14-day eating rhythm</strong> that still allows family food, owambe and Sunday rice without turning you into a prisoner.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>The quick win for the first 24 hours: <strong>one plate-order move plus one short walk</strong> that helps many people feel less heavy after meals.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>What to drink before, during and after meals so you are not confusing thirst, hunger and sugar fear.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#eb7d21] mr-4 shrink-0 translate-y-[3px]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>The <strong>“owambe script”</strong> for saying no without attracting pity, questions, or family broadcast.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ REAL VERIFIED RESULTS ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-12 px-5">
+    <div class="max-w-[800px] w-full">
+
+        <p class="text-center text-gray-500 italic mb-8">
+            What people should put here are real, verified results.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <img src="https://i.ibb.co/fVgkDB7s/Gemini-Generated-Image-qpr4r7qpr4r7qpr4.jpg" alt="Verified result" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/0VY9VPj8/Gemini-Generated-Image-ftn013ftn013ftn0.jpg" alt="Verified result" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/0jJ2Wnb1/Gemini-Generated-Image-2vbnpu2vbnpu2vbn.jpg" alt="Verified result" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+        </div>
+
+        <h2 class="font-serif font-bold text-2xl md:text-3xl text-center text-[#1f5da0] mb-8 mt-14">
+            Here testimonies from people who bought
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <img src="https://i.ibb.co/hRD9QsRJ/Gemini-Generated-Image-j1fbkj1fbkj1fbkj.jpg" alt="Testimony from a buyer" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/jkZRprqV/Gemini-Generated-Image-e08wefe08wefe08w.jpg" alt="Testimony from a buyer" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/1t02YP4G/Gemini-Generated-Image-5qfjsm5qfjsm5qfj.jpg" alt="Testimony from a buyer" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ COMPARE THE REAL COST ============ -->
+<div class="bg-white px-5 py-16 pt-2 flex justify-center">
+    <div class="max-w-[800px] w-full text-gray-900 text-[1.05rem] leading-[1.8] space-y-6">
+
+        <div class="flex items-center justify-center gap-4 mb-8 mt-4">
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+            <h2 class="font-serif font-black text-[1.35rem] md:text-2xl text-center text-[#1f5da0] leading-snug tracking-wide">COMPARE THE REAL COST OF STAYING CONFUSED</h2>
+            <span class="hidden sm:block w-10 md:w-16 h-px bg-[#1f5da0]/40"></span>
+        </div>
+
+        <p>You do not need another imported bottle with fine label.</p>
+
+        <p>You do not need to fear every plate like it is carrying knife.</p>
+
+        <p>You do not need to keep swallowing advice made for people that do not know amala.</p>
+
+        <p>Everything inside uses local food, normal market items, and clear safety notes.</p>
+
+        <p class="font-bold">Compare that to:</p>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm space-y-4 my-6">
+            <p class="flex items-start gap-2"><span class="shrink-0">❌</span><span>Random WhatsApp “sugar flush” packs: <strong>₦25,000–₦80,000</strong> — and nobody can tell you exactly what changed.</span></p>
+            <p class="flex items-start gap-2"><span class="shrink-0">❌</span><span>One month of panic buying every herb somebody mentions: money gone, confusion remains.</span></p>
+            <p class="flex items-start gap-2"><span class="shrink-0">❌</span><span>One serious complication scare: tests, transport, drugs, family stress, sleep lost.</span></p>
+            <p class="flex items-start gap-2"><span class="shrink-0">❌</span><span>The REAL cost: your peace, your table, your confidence, your partner’s sleep, your children watching you shrink.</span></p>
+        </div>
+
+        <p class="font-bold text-lg text-black">This guide is <span class="highlight">₦9,500</span>.</p>
+
+        <p>Less than many families spend on one “let’s just try it” bottle.</p>
+
+        <p>Yet it gives you a full routine you can repeat, track and discuss with your doctor.</p>
+
+        <p class="font-bold">Not a cure.</p>
+
+        <p class="font-bold">Not magic.</p>
+
+        <p class="font-bold"><span class="scribble-underline">A gate.</span></p>
+
+    </div>
+</div>
+
+<!-- ============ TESTIMONIALS FROM REAL PEOPLE ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center bg-white py-12 px-5">
+    <div class="max-w-[800px] w-full">
+
+        <h2 class="font-serif font-bold text-2xl md:text-3xl text-center text-[#1f5da0] mb-8 uppercase tracking-wide">
+            Testimonials From Real People
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img src="https://i.ibb.co/PZWCYKf2/Gemini-Generated-Image-d7anbvd7anbvd7an.jpg" alt="Testimonial from real person" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/SXccmPhr/Gemini-Generated-Image-sy011usy011usy01.jpg" alt="Testimonial from real person" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/v66gT3wJ/Gemini-Generated-Image-e6ln8ce6ln8ce6ln.jpg" alt="Testimonial from real person" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+            <img src="https://i.ibb.co/pjXytJj9/Gemini-Generated-Image-6qoso96qoso96qos.jpg" alt="Testimonial from real person" class="w-full h-auto rounded-lg border border-gray-200 shadow-md">
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ PRICE ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint py-12 px-5">
+    <div class="max-w-[800px] w-full text-[1.05rem] leading-[1.8] space-y-6">
+
+        <h2 class="font-serif font-bold text-2xl md:text-3xl text-center text-[#1a1a1a] pt-4">
+            How much does The Ancestral Carb Gate™ cost?
+        </h2>
+
+        <p>Let me be honest with you.</p>
+
+        <p>A fair price for a full Nigerian meal-sequence system, herbal safety notes, 14-day plan, tracker, market list, party guide and doctor-question script would be much higher.</p>
+
+        <p>But I know times are hard.</p>
+
+        <p>I know the same person buying this guide may also be buying strips, drugs, food, fuel and school things.</p>
+
+        <p>So today, if the button below is still showing this price, you can get everything for:</p>
+
+        <div class="border-2 border-dashed border-[#cc0000] bg-white py-8 px-8 text-center my-6 rounded-sm shadow-sm">
+            <p class="text-5xl md:text-7xl font-black text-[#cc0000]">₦9,500</p>
+        </div>
+
+        <p class="font-bold">Not ₦40,000.</p>
+
+        <p class="font-bold">Not ₦27,500.</p>
+
+        <p class="font-bold text-2xl text-[#cc0000]">₦9,500.</p>
+
+        <p>If this price changes later, it will be because the bundle changed, printing/support costs changed, or the launch period ended.</p>
+
+        <p>No fake countdown.</p>
+
+        <p>No “only 3 people left” lie.</p>
+
+        <p class="font-bold">Just a clear price for a clear plan.</p>
+
+    </div>
+</section>
+
+<!-- ============ BONUSES ============ -->
+<section class="font-sans text-gray-800 antialiased w-full flex flex-col items-center screen-tint-warm py-12 px-5">
+    <div class="max-w-[800px] w-full">
+
+        <h2 class="font-serif font-bold text-2xl md:text-3xl text-center text-[#1a1a1a] mb-10">
+            Here are some mouth watering bonuses:
+        </h2>
+
+        <div class="bg-white border-2 border-[#d19e66] rounded-lg overflow-hidden shadow-md mb-10">
+            <img src="https://i.ibb.co/LXZ8VfL5/1.jpg" alt="The 14-Day Nigerian Gate Meal Plan" class="w-full h-auto">
+            <div class="p-6">
+                <p class="text-[1.1rem] font-bold text-[#1f5da0] mb-2">✅ BONUS #1: The 14-Day Nigerian Gate Meal Plan <span class="text-gray-500 font-normal">....... ₦5,000 value</span></p>
+                <p class="text-[1rem] leading-relaxed mb-3">Exactly what your plate should look like — morning, afternoon, night — for 14 straight days. Built around eba, amala, rice, beans, yam, pap and bread. Not quinoa. Not oats in a ₦9,000 imported box.</p>
+                <p class="text-[1rem] leading-relaxed mb-3">The order is already arranged for you. You don't calculate. You don't stand at the table doing mental mathematics while everybody else is laughing and eating.</p>
+                <p class="text-[1rem] leading-relaxed">You just look at the day, look at your plate, and follow the gate.</p>
+            </div>
+        </div>
+
+        <div class="bg-white border-2 border-[#d19e66] rounded-lg overflow-hidden shadow-md">
+            <img src="https://i.ibb.co/DHkmsZz6/2.jpg" alt="The Quiet Market List + Local Swaps" class="w-full h-auto">
+            <div class="p-6">
+                <p class="text-[1.1rem] font-bold text-[#1f5da0] mb-2">✅ BONUS #2: The Quiet Market List + Local Swaps <span class="text-gray-500 font-normal">....... ₦5,000 value</span></p>
+                <p class="text-[1rem] leading-relaxed mb-3">This one removes the two questions that quietly kill people's hope: "What exactly do I buy?" and "Must I announce my sickness to the whole market?"</p>
+                <p class="text-[1rem] leading-relaxed">You get the exact items, what they're called in Nigerian markets, what a fair price looks like, and the plain words to say to the seller so nobody in Mile 12, Bodija, Onitsha or Sabon Gari is broadcasting your health to strangers, and nobody sells you "special diabetes leaf" at five times the normal price.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ DARK OFFER BOX ============ -->
+<section class="bg-white p-4 md:p-8 pb-0 flex justify-center font-['Merriweather',_serif]">
+
+    <div class="w-full max-w-md space-y-8">
+
+        <div class="bg-[#212121] border-2 border-[#b08832] rounded-[3px] p-6 shadow-xl">
+
+            <h2 class="text-[#cd9e3b] text-center text-lg font-bold mb-6 tracking-wide">
+                Everything you’re getting today
+            </h2>
+
+            <div class="flex justify-center mb-8">
+                <img src="https://i.ibb.co/8Svth7S/bundle.jpg" alt="The Ancestral Carb Gate Bundle" class="w-[90%] h-auto rounded shadow-lg object-cover">
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex justify-between items-start border-b border-[#333333] pb-4">
+                    <div class="flex items-start text-[#dddddd] pr-2">
+                        <span class="mr-2 mt-[2px] text-sm">✅</span>
+                        <div class="text-[14px] leading-relaxed">
+                            The Ancestral Carb Gate™ Core Guide
+                        </div>
+                    </div>
+                    <span class="text-[#cd9e3b] font-bold text-[14px] mt-1 whitespace-nowrap">₦15,000 value</span>
+                </div>
+
+                <div class="flex justify-between items-start border-b border-[#333333] pb-4 mt-4">
+                    <div class="flex items-start text-[#dddddd] pr-2">
+                        <span class="mr-2 mt-[2px] text-sm">✅</span>
+                        <div class="text-[14px] leading-relaxed">
+                            14-Day Nigerian Meal-Sequence Tracker
+                        </div>
+                    </div>
+                    <span class="text-[#cd9e3b] font-bold text-[14px] mt-1 whitespace-nowrap">₦5,000 value</span>
+                </div>
+
+                <div class="flex justify-between items-start pb-4 mt-4">
+                    <div class="flex items-start text-[#dddddd] pr-2">
+                        <span class="mr-2 mt-[2px] text-sm">✅</span>
+                        <div class="text-[14px] leading-relaxed">
+                            Local Market Shopping List + Swaps
+                        </div>
+                    </div>
+                    <span class="text-[#cd9e3b] font-bold text-[14px] mt-1 whitespace-nowrap">₦5,000 value</span>
+                </div>
+            </div>
+
+            <hr class="border-t-[1.5px] border-[#b08832] my-2">
+
+            <div class="mt-6 space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-[#a1a1a1] text-[15px]">Total Value:</span>
+                    <span class="text-[#a1a1a1] text-[15px] line-through decoration-1">₦25,000</span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span class="text-white text-[18px] font-bold tracking-wide">You Pay Today:</span>
+                    <span class="text-[#cd9e3b] text-[22px] font-bold"><span class="circle-scribble">₦9,500</span></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-[#333333] text-left font-['Inter',_sans-serif] leading-relaxed space-y-4">
+            <p>The main guide shows you the gate.</p>
+            <p>The tracker shows you what your body is doing.</p>
+            <p>The market list removes “what do I buy?” confusion.</p>
+            <p>The owambe guide protects you in public.</p>
+            <p>The safety notes keep you from making the dangerous mistake of stopping medication because one leaf sounded powerful.</p>
+            <p class="font-bold">That last one matters.</p>
+            <p class="font-bold">A lot.</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-1">
+            <p class="font-serif text-xl md:text-2xl font-bold text-[#1f5da0] text-center">Yes — I Want The Gate Before My Next Meal</p>
+
+            <div class="flex items-center justify-center gap-2 font-handwriting text-3xl text-[#cc0000] -rotate-3 select-none mt-2">
+                click here
+                <svg width="20" height="42" viewBox="0 0 22 44" fill="none"><path d="M11,2 C11,16 8,26 10,38" stroke="#cc0000" stroke-width="2.6" stroke-linecap="round"/><path d="M3,30 L10,40 L18,29" stroke="#cc0000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+        </div>
+
+        <!-- REPLACE href WITH YOUR CHECKOUT LINK -->
+        <a href="https://selar.com/fb377fi969" class="cta-btn font-['Inter',_sans-serif] !mt-2">
+            CLICK HERE TO GET THE ANCESTRAL CARB GATE™ FOR ₦9,500
+        </a>
+
+        <p class="text-center text-[#333333] font-['Inter',_sans-serif] leading-relaxed">
+            Secure checkout. Instant access after payment.<br>
+            Read it tonight. Start the Before-Eba Rule tomorrow morning.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section class="screen-tint py-16 px-5 mt-8">
+    <div class="max-w-[800px] mx-auto">
+        <div class="guarantee-box p-8 md:p-12 text-center mt-4">
+            <p class="font-bold text-[1.15rem] mb-4">You are covered by a 30-Day “Use It With Your Doctor” Guarantee.</p>
+            <p class="leading-[1.8]">Take the guide.<br>
+            Read it tonight.<br>
+            Use the meal sequence.<br>
+            Use the tracker.<br>
+            Use the market list.<br>
+            Use the safety notes.<br>
+            Ask your doctor or pharmacist the questions inside.</p>
+            <p class="leading-[1.8] mt-4">If after 30 days you honestly feel it did not give you a clearer Nigerian routine for steadier mornings, send one email.</p>
+            <p class="font-bold leading-[1.8] mt-4">You get your ₦9,500 back.</p>
+            <p class="leading-[1.8] mt-4">No story.<br>No quarrel.<br>No “prove you are serious.”</p>
+            <p class="leading-[1.8] mt-4">I am not asking you to risk money on hope again.</p>
+            <p class="font-bold text-lg mt-2">I am asking you to risk hope on a plan.</p>
+            <p class="font-bold text-lg mt-1">There is a difference.</p>
+            <!-- COSMETIC: Personalization — blue graphic signature -->
+            <p class="signature text-right mt-8 mr-2 md:mr-8">— Engr. Chuka</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TWO OPTIONS ============ -->
+<section class="screen-tint py-16 px-5">
+    <div class="max-w-[900px] mx-auto">
+        <div class="subhead-breadcrumb text-center text-2xl md:text-[1.6rem] !mt-2 mb-2">Right now, you have two options.</div>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+            <!-- OPTION 1 -->
+            <div class="border-2 border-gray-300 rounded-lg p-6 md:p-8 bg-white/70">
+                <p class="font-black text-xl text-gray-500 mb-4 tracking-wide">Option 1: Put a gate before the carb.</p>
+                <div class="leading-[1.8] space-y-2">
+                    <p>Tonight, you download the guide.</p>
+                    <p>You see the exact order.</p>
+                    <p>You see what to do before eba, rice, yam, beans, bread and pap.</p>
+                    <p>You see which herbs to treat with respect and which combinations to ask your pharmacist about.</p>
+                    <p>You stop guessing.</p>
+                    <p>By tomorrow morning, you are not entering the day empty-handed.</p>
+                    <p>By Day 14, you have your own log — not somebody’s testimony — showing what your body did when the order changed.</p>
+                    <p>You still take your medication unless your doctor says otherwise.</p>
+                    <p>You still go for review.</p>
+                    <p>But now, you are not only waiting for hospital to save you.</p>
+                    <p class="font-bold">You are participating in your own rescue.</p>
+                </div>
+            </div>
+
+            <!-- OPTION 2 -->
+            <div class="border-2 border-[#1f5da0] rounded-lg p-6 md:p-8 bg-[#f0f6ff] shadow-lg">
+                <p class="font-black text-xl text-[#1f5da0] mb-4 tracking-wide">Option 2: Keep entering every meal without a gate.</p>
+                <div class="leading-[1.8] space-y-2">
+                    <p>Same meter.</p>
+                    <p>Same fear.</p>
+                    <p>Same dry mouth.</p>
+                    <p>Same night waking.</p>
+                    <p>Same jokes at work.</p>
+                    <p>Same pity at parties.</p>
+                    <p>Same corridor moments at home.</p>
+                    <p>And the cost is not only money.</p>
+                    <p>It is the small way you stop going out.</p>
+                    <p>The way your partner starts speaking carefully.</p>
+                    <p>The way your children begin to watch your plate.</p>
+                    <p>The way every wedding becomes calculation instead of joy.</p>
+                    <p class="font-bold">Doing nothing is also a decision.</p>
+                    <p class="font-bold">It just does not feel like one because it is quiet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHAT HAPPENS WHEN YOU CLICK ============ -->
+<section id="buy" class="bg-white py-16 px-5">
+    <div class="max-w-[700px] mx-auto text-[1.05rem] leading-[1.8]">
+
+        <div class="subhead-breadcrumb text-center text-2xl md:text-[1.6rem] !mt-2">Here is exactly what happens after you click.</div>
+
+        <ol class="space-y-6 mt-8">
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">1</span>
+                <p>You tap the button.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">2</span>
+                <p>You land on a secure checkout page.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">3</span>
+                <p>You pay <strong>₦9,500</strong> by transfer, card or the payment option shown.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">4</span>
+                <p>Immediately, you receive access to the download page.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">5</span>
+                <p>No waiting for waybill.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">6</span>
+                <p>No “network issue” excuse.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">7</span>
+                <p>No one calling you to beg before delivery.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">8</span>
+                <p>Tonight, you open the guide on your phone.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">9</span>
+                <p>You read the first short chapter.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">10</span>
+                <p>You check your kitchen.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">11</span>
+                <p>You check your market list.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">12</span>
+                <p>You place tomorrow’s plate in the right order before sleep.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="w-9 h-9 rounded-full bg-[#1f5da0] text-white font-bold flex items-center justify-center shrink-0">13</span>
+                <p>Tomorrow morning, before the first bite, you run the gate.</p>
+            </li>
+        </ol>
+
+        <p class="mt-8 font-bold">That is all.</p>
+
+        <p>Simple does not mean easy every day.</p>
+
+        <p class="font-bold">But it means you finally know what to do.</p>
+
+        <div id="cta-trigger" class="mt-14">
+            <h2 class="font-serif font-bold text-2xl md:text-3xl text-center text-[#1f5da0] mb-2">Get The Ancestral Carb Gate™ Now</h2>
+
+            <!-- REPLACE href WITH YOUR CHECKOUT LINK -->
+            <a href="https://selar.com/fb377fi969" class="cta-btn">
+                YES — SEND ME THE 14-DAY NIGERIAN PLAN FOR ₦9,500
+            </a>
+
+            <p class="text-center font-bold text-gray-700">Instant access.</p>
+            <p class="text-center font-bold text-gray-700">30-day guarantee.</p>
+            <p class="text-center font-bold text-gray-700">Use alongside your doctor’s plan — never instead of it.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ FOOTER / MEDICAL NOTE ============ -->
+<footer class="bg-[#313131] text-gray-400 text-center text-xs py-10 px-4 space-y-4">
+    <p class="max-w-3xl mx-auto leading-relaxed text-left sm:text-center">
+        <strong class="text-gray-300">Important medical note:</strong><br>
+        The Ancestral Carb Gate™ is an educational eating and lifestyle guide. It is not a cure for diabetes. It does not diagnose, treat or replace medical care. Do not stop, reduce or change any prescribed medication because of this guide. Some herbs and foods can interact with medicines or affect blood sugar. If you use insulin or drugs that can cause low sugar, speak to your doctor or pharmacist before changing meal timing. Seek urgent care for chest pain, confusion, fainting, severe weakness, wounds not healing, sudden vision change, vomiting, very high readings with symptoms, or signs of low blood sugar that do not improve. Results vary from person to person.
+    </p>
+    <p>© 2026 The Ancestral Carb Gate™. All rights reserved.</p>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div id="sticky-cta">
+    <a href="#buy" class="cta-btn !my-0">Get The Ancestral Carb Gate™ Guide</a>
+</div>
+
+<script>
+    const triggerSection = document.getElementById("cta-trigger");
+    const stickyCTA = document.getElementById("sticky-cta");
+    let hiddenForever = false;
+
+    function handleScroll() {
+        if (hiddenForever) return;
+
+        const scrollDistance = document.documentElement.scrollHeight - window.innerHeight;
+        const twentyPercent = scrollDistance * 0.15;
+
+        if (window.scrollY > twentyPercent) {
+            stickyCTA.classList.add("show");
+        } else {
+            stickyCTA.classList.remove("show");
+        }
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    hiddenForever = true;
+                    stickyCTA.classList.remove("show");
+                    observer.disconnect();
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    observer.observe(triggerSection);
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+</script>
+
+</body>
+</html>
 
